@@ -2,19 +2,18 @@ package modele;
 
 import java.awt.Color;
 import java.util.Vector;
-/*
+
 import mesmaths.geometrie.base.Vecteur;
-
-
+import exodecorateur_angryballs.maladroit.AnimationBilles;
+import exodecorateur_angryballs.maladroit.EcouteurBoutonArrêter;
+import exodecorateur_angryballs.maladroit.EcouteurBoutonLancer;
 import exodecorateur_angryballs.maladroit.modele.Bille;
 import exodecorateur_angryballs.maladroit.modele.BilleMvtNewtonArret;
 import exodecorateur_angryballs.maladroit.modele.BilleMvtNewtonFrottementRebond;
+import exodecorateur_angryballs.maladroit.modele.BilleMvtPesanteurFrottementRebond;
 import exodecorateur_angryballs.maladroit.modele.BilleMvtRUPasseMurailles;
 import exodecorateur_angryballs.maladroit.modele.BilleMvtRURebond;
-import exodecorateur_angryballs.maladroit.modele.BilleMvtPesanteurFrottementRebond;
 import exodecorateur_angryballs.maladroit.vues.CadreAngryBalls;
-import exodecorateur_angryballs.maladroit.vues.VueBillard;
-import exodecorateur_angryballs.modele.*;*/
 
 /**
  * Gestion d'une liste de billes en mouvement ayant toutes un comportement différent
