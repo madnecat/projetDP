@@ -2,7 +2,5 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="/Users/Thomas/Dropbox/études/Cours/M1/DP/a_diffuser_annee_2014_2015/sujet_projet_decorateur_angryballs_14_15/exodecorateur_angryballs_maladroit_sources.jar"/>
-	<classpathentry kind="lib" path="/Users/Thomas/Dropbox/études/Cours/M1/DP/a_diffuser_annee_2014_2015/sujet_projet_decorateur_angryballs_14_15/mesmaths_sources.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
