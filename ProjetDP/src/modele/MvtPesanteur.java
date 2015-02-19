@@ -3,6 +3,7 @@ package modele;
 import java.util.Vector;
 
 import mesmaths.geometrie.base.Vecteur;
+import mesmaths.mecanique.MecaniquePoint;
 import modele.Bille;
 
 public class MvtPesanteur extends DecorateurBille
@@ -25,9 +26,8 @@ public class MvtPesanteur extends DecorateurBille
 	public void gestionAccélération(Vector<Bille> billes)
 	{
 		billeDécoré.gestionAccélération(billes);
-		
-		super.getAccélération().ajoute(this.pesanteur);          // contribution du champ de pesanteur (par exemple)
-	}
 
+		this.getAccélération().ajoute(this.pesanteur);          // contribution du champ de pesanteur (par exemple)
+	}
 
 }

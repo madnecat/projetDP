@@ -16,12 +16,12 @@ public class BilleStandard  extends Bille
 	@Override
 	public void collisionContour(double abscisseCoinHautGauche,	double ordonnéeCoinHautGauche, double largeur, double hauteur) 
 	{
-		// TODO Auto-generated method stub
+		
 	}
 	
 	@Override
 	public void gestionAccélération(Vector<Bille> billes)
 	{
-		super.getAccélération().set(Vecteur.VECTEURNUL); // remise à zéro du vecteur accélération        
+		this.getAccélération().set(Vecteur.VECTEURNUL); // remise à zéro du vecteur accélération        
 	}
 }
