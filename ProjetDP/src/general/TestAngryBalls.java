@@ -84,10 +84,10 @@ public class TestAngryBalls {
 		Bille testRebond= new Rebond(new BilleStandard(p0, rayon, v0, Color.red));
 		billes.add(testRebond);
 		
-		Bille testArret= new Arret(new BilleStandard(p1, rayon, v1, Color.blue));
+		Bille testArret= new MvtNewton (new Arret(new BilleStandard(p1, rayon, v1, Color.blue)));
 		billes.add(testArret);
 		
-		Bille testPasseMurailles= new MvtNewton (new PasseMurailles(new BilleStandard(p2, rayon, v2, Color.cyan)));
+		Bille testPasseMurailles= new PasseMurailles(new BilleStandard(p2, rayon, v2, Color.cyan));
 		billes.add(testPasseMurailles);
 		
 		

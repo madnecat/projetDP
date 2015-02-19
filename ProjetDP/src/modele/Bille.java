@@ -155,7 +155,7 @@ public void déplacer( double deltaT)
  * */
 public  void gestionAccélération(Vector<Bille> billes)
 {
-this.getAccélération().set(Vecteur.VECTEURNUL);
+	this.getAccélération().set(Vecteur.VECTEURNUL);
 }
 
 /**
