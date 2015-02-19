@@ -7,7 +7,9 @@ import mesmaths.geometrie.base.Vecteur;
 import modele.Arret;
 import modele.Bille;
 import modele.BilleStandard;
+import modele.MvtFrottement;
 import modele.MvtNewton;
+import modele.MvtPesanteur;
 import modele.PasseMurailles;
 import modele.Rebond;
 import vues.CadreAngryBalls;
@@ -81,15 +83,15 @@ public class TestAngryBalls {
 		// --------------- ici commence la partie à changer
 		// ---------------------------------
 		
-		Bille testRebond= new Rebond(new BilleStandard(p0, rayon, v0, Color.red));
+		Bille testRebond= new MvtPesanteur(new Rebond(new BilleStandard(p0, rayon, v0, Color.red)), new Vecteur(0,0.001));
 		billes.add(testRebond);
-		
+		/*
 		Bille testArret= new MvtNewton (new Arret(new BilleStandard(p1, rayon, v1, Color.blue)));
 		billes.add(testArret);
 		
 		Bille testPasseMurailles= new PasseMurailles(new BilleStandard(p2, rayon, v2, Color.cyan));
 		billes.add(testPasseMurailles);
-		
+		*/
 		
 		// ---------------------- ici finit la partie à changer
 		// -------------------------------------------------------------

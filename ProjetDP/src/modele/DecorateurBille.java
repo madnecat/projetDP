@@ -1,5 +1,7 @@
 package modele;
 
+import java.util.Vector;
+
 public abstract class DecorateurBille extends Bille
 {
 	protected Bille billeDécoré;
@@ -13,4 +15,6 @@ public abstract class DecorateurBille extends Bille
 	@Override
 	public abstract void collisionContour(double abscisseCoinHautGauche,double ordonnéeCoinHautGauche, double largeur, double hauteur);
 	
+	@Override
+	public abstract void gestionAccélération(Vector<Bille> billes);
 }

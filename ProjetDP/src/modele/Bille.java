@@ -153,10 +153,8 @@ public void déplacer( double deltaT)
  * La nature du calcul du vecteur accélération de la bille  est définie dans les classes dérivées
  * A ce niveau le vecteur accélération est mis à zéro (c'est à dire pas d'accélération)
  * */
-public  void gestionAccélération(Vector<Bille> billes)
-{
-	this.getAccélération().set(Vecteur.VECTEURNUL);
-}
+public abstract void gestionAccélération(Vector<Bille> billes);
+
 
 /**
  * gestion de l'éventuelle  collision de cette bille avec les autres billes

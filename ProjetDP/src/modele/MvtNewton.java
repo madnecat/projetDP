@@ -22,9 +22,8 @@ public class MvtNewton extends DecorateurBille
 	@Override
 	public void gestionAccélération(Vector<Bille> billes)
 	{
-		super.billeDécoré.gestionAccélération(billes);
-		
-		super.gestionAccélération(billes);                              // remise à zéro du vecteur accélération
+		billeDécoré.gestionAccélération(billes);
+
 		this.getAccélération().ajoute(OutilsBille.gestionAccélérationNewton(this, billes));     // contribution de l'accélération due à l'attraction des autres billes
 	}
 }

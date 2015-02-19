@@ -1,6 +1,7 @@
 package modele;
 
 import java.awt.Color;
+import java.util.Vector;
 
 import mesmaths.geometrie.base.Vecteur;
 
@@ -17,6 +18,10 @@ public class BilleStandard  extends Bille
 	{
 		// TODO Auto-generated method stub
 	}
-
-
+	
+	@Override
+	public void gestionAccélération(Vector<Bille> billes)
+	{
+		super.getAccélération().set(Vecteur.VECTEURNUL); // remise à zéro du vecteur accélération        
+	}
 }
