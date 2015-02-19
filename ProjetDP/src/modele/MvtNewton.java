@@ -24,6 +24,6 @@ public class MvtNewton extends DecorateurBille
 	{
 		billeDécoré.gestionAccélération(billes);
 
-		this.getAccélération().ajoute(OutilsBille.gestionAccélérationNewton(this, billes));     // contribution de l'accélération due à l'attraction des autres billes
+		super.getAccélération().ajoute(OutilsBille.gestionAccélérationNewton(this, billes));     // contribution de l'accélération due à l'attraction des autres billes
 	}
 }
