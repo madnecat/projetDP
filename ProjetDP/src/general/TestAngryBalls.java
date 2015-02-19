@@ -4,17 +4,13 @@ import java.awt.Color;
 import java.util.Vector;
 
 import mesmaths.geometrie.base.Vecteur;
+import modele.Arret;
 import modele.Bille;
 import modele.BilleStandard;
+import modele.MvtNewton;
+import modele.PasseMurailles;
 import modele.Rebond;
 import vues.CadreAngryBalls;
-import exodecorateur_angryballs.maladroit.modele.BilleMvtNewtonArret;
-import exodecorateur_angryballs.maladroit.modele.BilleMvtNewtonFrottementRebond;
-import exodecorateur_angryballs.maladroit.modele.BilleMvtPesanteurFrottementRebond;
-import exodecorateur_angryballs.maladroit.modele.BilleMvtRUPasseMurailles;
-import exodecorateur_angryballs.maladroit.modele.BilleMvtRURebond;
-
-
 
 /**
  * Gestion d'une liste de billes en mouvement ayant toutes un comportement
@@ -85,17 +81,16 @@ public class TestAngryBalls {
 		// --------------- ici commence la partie à changer
 		// ---------------------------------
 		
-		Bille test= new Rebond(new BilleStandard(p0, rayon, v0, Color.red));
+		Bille testRebond= new Rebond(new BilleStandard(p0, rayon, v0, Color.red));
+		billes.add(testRebond);
 		
-		billes.add(test);
-		/*billes.add(new BilleMvtRURebond(p0, rayon, v0, Color.red));
-		billes.add(new BilleMvtPesanteurFrottementRebond(p1, rayon, v1,
-				new Vecteur(0, 0.001), Color.yellow));
-		billes.add(new BilleMvtNewtonFrottementRebond(p2, rayon, v2,
-				Color.green));
-		billes.add(new BilleMvtRUPasseMurailles(p3, rayon, v3, Color.cyan));
-		billes.add(new BilleMvtNewtonArret(p4, rayon, v4, Color.black));
-		 */
+		Bille testArret= new Arret(new BilleStandard(p1, rayon, v1, Color.blue));
+		billes.add(testArret);
+		
+		Bille testPasseMurailles= new MvtNewton (new PasseMurailles(new BilleStandard(p2, rayon, v2, Color.cyan)));
+		billes.add(testPasseMurailles);
+		
+		
 		// ---------------------- ici finit la partie à changer
 		// -------------------------------------------------------------
 

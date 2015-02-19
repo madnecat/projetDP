@@ -4,7 +4,6 @@ import java.awt.*;
 import java.util.Vector;
 
 import mesmaths.cinematique.Cinematique;
-import mesmaths.cinematique.Collisions;
 import mesmaths.geometrie.base.Geop;
 import mesmaths.geometrie.base.Vecteur;
 
@@ -142,9 +141,9 @@ public double masse() {return ro*Geop.volumeSphère(rayon);}
  *
  * La bille subit par défaut un mouvement uniformément accéléré
  * */
-public  void  déplacer( double deltaT)
+public void déplacer( double deltaT)
 {
-Cinematique.mouvementUniformémentAccéléré( this.getPosition(), this.getVitesse(), this.getAccélération(), deltaT);
+	Cinematique.mouvementUniformémentAccéléré( this.getPosition(), this.getVitesse(), this.getAccélération(), deltaT);	
 }
 
 /**

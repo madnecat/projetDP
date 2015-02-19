@@ -1,7 +1,5 @@
 package modele;
 
-import java.awt.Color;
-
 public abstract class DecorateurBille extends Bille
 {
 	protected Bille billeDécoré;
