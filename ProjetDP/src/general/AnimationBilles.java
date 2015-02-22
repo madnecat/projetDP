@@ -57,7 +57,11 @@ try
             billeCourante = billes.get(i);
             billeCourante.déplacer(deltaT);                 // mise à jour position et vitesse de cette bille
             billeCourante.gestionAccélération(billes);      // calcul de l'accélération subie par cette bille
-            billeCourante.gestionCollisionBilleBille(billes);
+            if(billeCourante.gestionCollisionBilleBille(billes))
+            {
+            	SonCollision son= new SonCollision("MirrorShattering.wav");
+            	son.jouerSon();
+            }
             billeCourante.collisionContour( 0, 0, vueBillard.largeurBillard(), vueBillard.hauteurBillard());        //System.err.println("billes = " + billes);
             }
         
