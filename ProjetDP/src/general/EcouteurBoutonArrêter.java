@@ -11,17 +11,17 @@ import java.awt.event.ActionListener;
 
 public class EcouteurBoutonArrêter implements ActionListener
 {
-AnimationBilles animationBilles;
+	AnimationBilles animationBilles;
 
-public EcouteurBoutonArrêter(AnimationBilles animationBilles)
-    {
-    this.animationBilles = animationBilles;
-    }
+	public EcouteurBoutonArrêter(AnimationBilles animationBilles)
+	{
+	    this.animationBilles = animationBilles;
+	}
 
-@Override
-public void actionPerformed(ActionEvent e)
-{
-this.animationBilles.arrêterAnimation();
-}
+	@Override
+	public void actionPerformed(ActionEvent e)
+	{
+		this.animationBilles.arrêterAnimation();
+	}
 
 }

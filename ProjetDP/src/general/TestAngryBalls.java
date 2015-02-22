@@ -83,20 +83,11 @@ public class TestAngryBalls {
 		// --------------- ici commence la partie à changer
 		// ---------------------------------
 		
-		Bille testRebond= new MvtPesanteur(new MvtFrottement(new Rebond(new BilleStandard(p0, rayon, v0, Color.red))),new Vecteur(0,0.001));
-		billes.add(testRebond);
-		/*
-		Bille testRebond1= new MvtPesanteur(new Rebond(new BilleStandard(p1, rayon, v1, Color.blue)),new Vecteur(0,0.001));
-		billes.add(testRebond1);
-		Bille testRebond2= new MvtPesanteur(new Rebond(new BilleStandard(p2, rayon, v2, Color.cyan)),new Vecteur(0,0.001));
-		billes.add(testRebond2);
-		
-		Bille testArret= new MvtNewton (new Arret(new BilleStandard(p1, rayon, v1, Color.blue)));
-		billes.add(testArret);
-		
-		Bille testPasseMurailles= new PasseMurailles(new BilleStandard(p2, rayon, v2, Color.cyan));
-		billes.add(testPasseMurailles);
-		*/
+		billes.add( new Rebond( new BilleStandard(p0, rayon, v0, Color.red)));
+		billes.add( new MvtPesanteur( new MvtFrottement( new Rebond( new BilleStandard(p1, rayon, v1, Color.yellow))),new Vecteur(0,0.001)));
+		billes.add( new MvtNewton( new MvtFrottement( new Rebond( new BilleStandard(p2, rayon, v2, Color.green)))));
+		billes.add( new PasseMurailles( new BilleStandard(p3, rayon, v3, Color.cyan)));
+		billes.add( new MvtNewton( new Arret( new BilleStandard(p4, rayon, v4, Color.black))));
 		
 		// ---------------------- ici finit la partie à changer
 		// -------------------------------------------------------------
