@@ -1,10 +1,9 @@
-package modele;
-
-import java.util.Vector;
+package modele.collision;
 
 import mesmaths.cinematique.Collisions;
+import modele.Bille;
 
-public class Rebond extends DecorateurBille
+public class Rebond extends Collision
 {
 
 	public Rebond(Bille billeDécoré) 
@@ -17,10 +16,5 @@ public class Rebond extends DecorateurBille
 	{
 		Collisions.collisionBilleContourAvecRebond( this.getPosition(), this.getRayon(), this.getVitesse(), abscisseCoinHautGauche, ordonnéeCoinHautGauche, largeur, hauteur);
 	}
-	
-	@Override
-	public void gestionAccélération(Vector<Bille> billes)
-	{
-		billeDécoré.gestionAccélération(billes);
-	}
+
 }

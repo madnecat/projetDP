@@ -4,14 +4,14 @@ import java.awt.Color;
 import java.util.Vector;
 
 import mesmaths.geometrie.base.Vecteur;
-import modele.Arret;
 import modele.Bille;
 import modele.BilleStandard;
-import modele.MvtFrottement;
-import modele.MvtNewton;
-import modele.MvtPesanteur;
-import modele.PasseMurailles;
-import modele.Rebond;
+import modele.collision.Arret;
+import modele.collision.PasseMurailles;
+import modele.collision.Rebond;
+import modele.mouvement.MvtFrottement;
+import modele.mouvement.MvtNewton;
+import modele.mouvement.MvtPesanteur;
 import vues.CadreAngryBalls;
 
 /**

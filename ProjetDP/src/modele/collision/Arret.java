@@ -1,10 +1,9 @@
-package modele;
-
-import java.util.Vector;
+package modele.collision;
 
 import mesmaths.cinematique.Collisions;
+import modele.Bille;
 
-public class Arret extends DecorateurBille
+public class Arret extends Collision
 {
 
 	public Arret(Bille billeDécoré) 
@@ -19,9 +18,4 @@ public class Arret extends DecorateurBille
 		Collisions.collisionBilleContourAvecArretVertical(this.getPosition(), this.getRayon(), this.getVitesse(), ordonnéeCoinHautGauche, hauteur);
 	}
 
-	@Override
-	public void gestionAccélération(Vector<Bille> billes)
-	{
-		billeDécoré.gestionAccélération(billes);
-	}
 }

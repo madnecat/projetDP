@@ -1,22 +1,16 @@
-package modele;
+package modele.mouvement;
 
 import java.util.Vector;
 
 import modele.Bille;
 import modele.OutilsBille;
 
-public class MvtNewton extends DecorateurBille
+public class MvtNewton extends Mouvement
 {
 
 	public MvtNewton(Bille billeDécoré) 
 	{
 		super(billeDécoré);
-	}
-
-	@Override
-	public void collisionContour(double abscisseCoinHautGauche,double ordonnéeCoinHautGauche, double largeur, double hauteur) 
-	{
-		billeDécoré.collisionContour(abscisseCoinHautGauche, ordonnéeCoinHautGauche, largeur, hauteur);	
 	}
 
 	@Override

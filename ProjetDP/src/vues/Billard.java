@@ -14,6 +14,7 @@ import modele.Bille;
  *  
  * 
  * */
+@SuppressWarnings("serial")
 public class Billard extends Canvas
 {
 Vector<Bille> billes;

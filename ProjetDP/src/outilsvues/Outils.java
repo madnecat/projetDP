@@ -3,12 +3,6 @@ package outilsvues;
 import java.awt.Dimension;
 import java.awt.Frame;
 import java.awt.Toolkit;
-import java.io.FileInputStream;
-import java.io.IOException;
-
-import sun.audio.AudioData;
-import sun.audio.AudioPlayer;
-import sun.audio.AudioStream;
 
 /**
  * Quelques outils pratiques dans des applis GUI

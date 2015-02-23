@@ -1,12 +1,11 @@
-package modele;
+package modele.mouvement;
 
 import java.util.Vector;
 
 import mesmaths.geometrie.base.Vecteur;
-import mesmaths.mecanique.MecaniquePoint;
 import modele.Bille;
 
-public class MvtPesanteur extends DecorateurBille
+public class MvtPesanteur extends Mouvement
 {
 	Vecteur pesanteur;
 	
@@ -16,12 +15,6 @@ public class MvtPesanteur extends DecorateurBille
 		this.pesanteur=pesanteur;
 	}
 
-	@Override
-	public void collisionContour(double abscisseCoinHautGauche, double ordonnéeCoinHautGauche, double largeur, double hauteur) 
-	{
-		billeDécoré.collisionContour(abscisseCoinHautGauche, ordonnéeCoinHautGauche, largeur, hauteur);
-	}
-	
 	@Override
 	public void gestionAccélération(Vector<Bille> billes)
 	{

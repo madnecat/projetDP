@@ -2,8 +2,6 @@ package modele;
 
 import java.util.Vector;
 
-import mesmaths.geometrie.base.Vecteur;
-
 public abstract class DecorateurBille extends Bille
 {
 	protected Bille billeDécoré;
