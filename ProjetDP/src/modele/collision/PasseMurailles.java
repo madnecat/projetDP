@@ -1,10 +1,9 @@
-package modele;
-
-import java.util.Vector;
+package modele.collision;
 
 import mesmaths.cinematique.Collisions;
+import modele.Bille;
 
-public class PasseMurailles extends DecorateurBille
+public class PasseMurailles extends Collision
 {
 
 	public PasseMurailles(Bille billeDécoré) 
@@ -16,11 +15,5 @@ public class PasseMurailles extends DecorateurBille
 	public void collisionContour(double abscisseCoinHautGauche,double ordonnéeCoinHautGauche, double largeur, double hauteur) 
 	{
 		Collisions.collisionBilleContourPasseMuraille( this.getPosition(), abscisseCoinHautGauche, ordonnéeCoinHautGauche, largeur, hauteur);
-	}
-
-	@Override
-	public void gestionAccélération(Vector<Bille> billes)
-	{
-		billeDécoré.gestionAccélération(billes);
 	}
 }

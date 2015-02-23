@@ -20,7 +20,7 @@ VueBillard vueBillard;    // la vue responsable du dessin des billes
 private Thread thread;    // pour lancer et arrêter les billes
 
 
-private static final double COEFF = 0.5;
+//private static final double COEFF = 0.5;
 
 /**
  * @param billes
@@ -41,9 +41,9 @@ try
     double deltaT;  // délai entre 2 mises à jour de la liste des billes
     Bille billeCourante;
     
-    double minRayons = AnimationBilles.minRayons(billes);   //nécessaire au calcul de deltaT
-    double minRayons2 = minRayons*minRayons;                //nécessaire au calcul de deltaT
-    
+    //double minRayons = AnimationBilles.minRayons(billes);   //nécessaire au calcul de deltaT
+    //double minRayons2 = minRayons*minRayons;                //nécessaire au calcul de deltaT
+        
     while (!Thread.interrupted())                           // gestion du mouvement
         {
         //deltaT = COEFF*minRayons2/(1+maxVitessesCarrées(billes));       // mise à jour deltaT. L'addition + 1 est une astuce pour éviter les divisions par zéro
@@ -57,7 +57,7 @@ try
             billeCourante = billes.get(i);
             billeCourante.déplacer(deltaT);                 // mise à jour position et vitesse de cette bille
             billeCourante.gestionAccélération(billes);      // calcul de l'accélération subie par cette bille
-            if(billeCourante.gestionCollisionBilleBille(billes))
+            if(billeCourante.gestionCollisionBilleBille(billes)) // lance un son si une collision entre deux billes et détectés
             {
             	SonCollision son= new SonCollision("MirrorShattering.wav");
             	son.jouerSon();

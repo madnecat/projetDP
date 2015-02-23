@@ -1,10 +1,11 @@
-package modele;
+package modele.mouvement;
 
 import java.util.Vector;
 
 import mesmaths.mecanique.MecaniquePoint;
+import modele.Bille;
 
-public class MvtFrottement extends DecorateurBille
+public class MvtFrottement extends Mouvement
 {
 
 	public MvtFrottement(Bille billeDécoré) 
@@ -12,12 +13,6 @@ public class MvtFrottement extends DecorateurBille
 		super(billeDécoré);
 	}
 
-	@Override
-	public void collisionContour(double abscisseCoinHautGauche,	double ordonnéeCoinHautGauche, double largeur, double hauteur) 
-	{
-		billeDécoré.collisionContour(abscisseCoinHautGauche, ordonnéeCoinHautGauche, largeur, hauteur);
-	}
-	
 	@Override
 	public void gestionAccélération(Vector<Bille> billes)
 	{

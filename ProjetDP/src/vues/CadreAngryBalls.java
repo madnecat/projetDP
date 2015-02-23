@@ -5,7 +5,6 @@ import java.util.Vector;
 
 import modele.Bille;
 import outilsvues.EcouteurTerminaison;
-
 import outilsvues.Outils;
 
 /**
@@ -15,6 +14,7 @@ import outilsvues.Outils;
  *  
  * 
  * */
+@SuppressWarnings("serial")
 public class CadreAngryBalls extends Frame implements VueBillard
 {
 TextField présentation;
