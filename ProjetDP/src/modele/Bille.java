@@ -21,9 +21,6 @@ public abstract class Bille
 
 public static double ro = 1;        // masse volumique
 
-protected Bille()
-{}
-
 public abstract double masse();
 
 /**
@@ -76,6 +73,33 @@ public abstract void dessine (Graphics g);
 
 
 public abstract String toString(); 
+
+//getters et setters abstraits
+
+public abstract Vecteur getPosition();
+
+public abstract void setPosition(Vecteur position);
+
+public abstract double getRayon();
+
+public abstract void setRayon(double rayon);
+
+public abstract Vecteur getVitesse();
+
+public abstract void setVitesse(Vecteur vitesse);
+
+public abstract Vecteur getAccélération();
+
+public abstract void setAccélération(Vecteur accélération);
+
+public abstract int getClef();
+
+public abstract void setClef(int clef);
+
+public abstract Color getCouleur();
+
+public abstract void setCouleur(Color couleur);
+
 
 //----------------- classe Bille -------------------------------------
 }
