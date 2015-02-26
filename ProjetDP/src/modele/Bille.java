@@ -65,7 +65,7 @@ public abstract boolean gestionCollisionBilleBille(Vector<Bille> billes);
  * 
  * La nature du comportement de la bille en réponse à cette collision est définie dans les classes dérivées
  * */
-public abstract void collisionContour(double abscisseCoinHautGauche, double ordonnéeCoinHautGauche, double largeur, double hauteur);
+public abstract boolean collisionContour(double abscisseCoinHautGauche, double ordonnéeCoinHautGauche, double largeur, double hauteur);
 
 
 

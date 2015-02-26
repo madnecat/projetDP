@@ -59,11 +59,15 @@ try
             billeCourante.gestionAccélération(billes);      // calcul de l'accélération subie par cette bille
             if(billeCourante.gestionCollisionBilleBille(billes)) // lance un son si une collision entre deux billes et détectés
             {
-            	SonCollision son= new SonCollision("MirrorShattering.wav");
+            	SonCollision son= new SonCollision("general/Tink.wav");
             	son.jouerSon();
             }
-            billeCourante.collisionContour( 0, 0, vueBillard.largeurBillard(), vueBillard.hauteurBillard());        //System.err.println("billes = " + billes);
+            if(billeCourante.collisionContour( 0, 0, vueBillard.largeurBillard(), vueBillard.hauteurBillard())) {
+            	SonCollision son= new SonCollision("general/Morse.wav");
+            	son.jouerSon();
             }
+            
+         }
         
         vueBillard.miseAJour();                                // on prévient la vue qu'il faut redessiner les billes
       

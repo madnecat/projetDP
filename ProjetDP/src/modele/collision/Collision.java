@@ -14,7 +14,7 @@ public abstract class Collision extends DecorateurBille
 	}
 
 	@Override
-	public abstract void collisionContour(double abscisseCoinHautGauche,double ordonnéeCoinHautGauche, double largeur, double hauteur);
+	public abstract boolean collisionContour(double abscisseCoinHautGauche,double ordonnéeCoinHautGauche, double largeur, double hauteur);
 
 	@Override
 	public void gestionAccélération(Vector<Bille> billes)

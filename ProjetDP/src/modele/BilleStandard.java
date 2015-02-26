@@ -36,9 +36,9 @@ public class BilleStandard  extends Bille
 	}
 
 	@Override
-	public void collisionContour(double abscisseCoinHautGauche,	double ordonnéeCoinHautGauche, double largeur, double hauteur) 
+	public boolean collisionContour(double abscisseCoinHautGauche,	double ordonnéeCoinHautGauche, double largeur, double hauteur) 
 	{
-	//ne se passe rien car si code exécuté, aucune collision choisie	
+		return false;//ne se passe rien car si code exécuté, aucune collision choisie	
 	}
 	
 	@Override

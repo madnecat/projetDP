@@ -16,9 +16,9 @@ public class SonCollision
 	SonCollision(String filename)
 	{	
 		try {
-		as= AudioSystem.getAudioInputStream(new File(filename));
-        son = AudioSystem.getClip();
-        son.open(as);
+			as= AudioSystem.getAudioInputStream(this.getClass().getClassLoader().getResource(filename));
+	        son = AudioSystem.getClip();
+	        son.open(as);
 		} catch (UnsupportedAudioFileException | LineUnavailableException | IOException e) 
         {
 			System.out.println("Erreur lors du chargement du son");
