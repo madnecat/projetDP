@@ -34,31 +34,15 @@ public class Billard extends Canvas {
 	 */
 	@Override
 	public void paint(Graphics graphics) {
-		Image mem = this.dbImage1;
-		this.dbImage1 = this.dbImage2;
-		this.dbImage2 = mem;
-		graphics.drawImage(dbImage2, 0, 0, this);
-		this.dbImage1 = createImage(this.getWidth(), this.getHeight());
-		this.paintComponent(dbImage1.getGraphics());
+		this.dbImage1 = createImage(Billard.this.getWidth(),
+				Billard.this.getHeight());
+		Billard.this.paintComponent(dbImage1.getGraphics());
+		graphics.drawImage(dbImage1, 0, 0, this);
+		
+				
 	}
 	
 	public void paintComponent(Graphics graphics) {
-		
-/* //création du buffer si il n'existe pas
-     if(buffer==null){
-        image = createImage(400,400);
-        buffer = image.getGraphics();
-      }
-     //on dessine sur le buffer mémoire
-      buffer.setColor( Color.white );
-      buffer.fillRect( 0, 0, 400, 400 );
-      buffer.setColor( Color.black );
-      buffer.drawString( "affichage d'une ligne de texte", x, 200 );
-      x++;
-      if(x>400) x = 0;
-      // finalement, le buffer mémoire est dessiné dans le buffer d'affichage
-      g.drawImage(image, 0, 0, this);
-   }*/
 		for (int i = 0; i < this.billes.size(); ++i)
 			this.billes.get(i).dessine(graphics);
 	}
