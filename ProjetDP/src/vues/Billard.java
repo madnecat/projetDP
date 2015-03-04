@@ -16,8 +16,8 @@ import modele.Bille;
  * */
 @SuppressWarnings("serial")
 public class Billard extends Canvas {
-	private Graphics dessin = null;
-	private Image dbImage;
+	private Image dbImage1= createImage(this.getWidth(), this.getHeight())
+			,dbImage2= createImage(this.getWidth(), this.getHeight());
 	Vector<Bille> billes;
 	
 
@@ -34,10 +34,12 @@ public class Billard extends Canvas {
 	 */
 	@Override
 	public void paint(Graphics graphics) {
-		this.dbImage = createImage(this.getWidth(), this.getHeight());
-		this.dessin = this.dbImage.getGraphics();
-		this.paintComponent(dessin);
-		graphics.drawImage(dbImage, 0, 0, this);
+		Image mem = this.dbImage1;
+		this.dbImage1 = this.dbImage2;
+		this.dbImage2 = mem;
+		this.dbImage1 = createImage(this.getWidth(), this.getHeight());
+		this.paintComponent(dbImage1.getGraphics());
+		graphics.drawImage(dbImage2, 0, 0, this);
 	}
 	
 	public void paintComponent(Graphics graphics) {
