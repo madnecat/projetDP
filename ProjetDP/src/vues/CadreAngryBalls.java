@@ -1,7 +1,6 @@
 package vues;
 
 import general.Animable;
-import general.EcouteurBoutonLancer;
 
 import java.awt.*;
 import java.util.Observer;
@@ -59,6 +58,7 @@ public class CadreAngryBalls extends Frame implements VueBillard {
 		this.bas.add(this.lancerBilles);
 		this.arrêterBilles = new Button("arrêter les billes");
 		this.bas.add(this.arrêterBilles);
+		
 	}
 
 	public double largeurBillard() {
@@ -93,5 +93,5 @@ public class CadreAngryBalls extends Frame implements VueBillard {
 	public void ajouteObserverArreter(Animable animable) {
 		new EcouteurBouton(animable, arrêterBilles, new ActionBoutonArrete());
 	}
-
+	
 }
