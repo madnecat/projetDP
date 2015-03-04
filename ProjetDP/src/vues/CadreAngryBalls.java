@@ -1,81 +1,97 @@
 package vues;
 
+import general.Animable;
+import general.EcouteurBoutonLancer;
+
 import java.awt.*;
+import java.util.Observer;
 import java.util.Vector;
 
 import modele.Bille;
+import outilsvues.EcouteurBouton;
 import outilsvues.EcouteurTerminaison;
 import outilsvues.Outils;
+import outilsvues.actions.ActionBoutonArrete;
+import outilsvues.actions.ActionBoutonLance;
 
 /**
- * Vue dessinant les billes et contenant les 3 boutons de contrôle (arrêt du programme, lancer les billes, arréter les billes) 
+ * Vue dessinant les billes et contenant les 3 boutons de contrôle (arrêt du
+ * programme, lancer les billes, arréter les billes)
  * 
- *  ICI : IL N'Y A RIEN A CHANGER 
- *  
+ * ICI : IL N'Y A RIEN A CHANGER
+ * 
  * 
  * */
 @SuppressWarnings("serial")
-public class CadreAngryBalls extends Frame implements VueBillard
-{
-TextField présentation;
-Billard billard;
-public Button lancerBilles, arrêterBilles;
-Panel haut, centre, bas;
+public class CadreAngryBalls extends Frame implements VueBillard {
+	TextField présentation;
+	Billard billard;
+	public Button lancerBilles, arrêterBilles;
+	Panel haut, centre, bas;
 
-EcouteurTerminaison ecouteurTerminaison;
+	EcouteurTerminaison ecouteurTerminaison;
 
-public CadreAngryBalls(String titre, String message, Vector<Bille> billes) throws HeadlessException
-{
-super(titre);
-Outils.place(this, 0.33, 0.33, 0.5, 0.5);
-this.ecouteurTerminaison = new EcouteurTerminaison(this);
+	public CadreAngryBalls(String titre, String message, Vector<Bille> billes)
+			throws HeadlessException {
+		super(titre);
+		Outils.place(this, 0.33, 0.33, 0.5, 0.5);
+		this.ecouteurTerminaison = new EcouteurTerminaison(this);
 
+		this.haut = new Panel();
+		this.haut.setBackground(Color.LIGHT_GRAY);
+		this.add(this.haut, BorderLayout.NORTH);
 
-this.haut = new Panel(); this.haut.setBackground(Color.LIGHT_GRAY);
-this.add(this.haut,BorderLayout.NORTH);
+		this.centre = new Panel();
+		this.add(this.centre, BorderLayout.CENTER);
 
-this.centre = new Panel();
-this.add(this.centre,BorderLayout.CENTER);
+		this.bas = new Panel();
+		this.bas.setBackground(Color.LIGHT_GRAY);
+		this.add(this.bas, BorderLayout.SOUTH);
 
-this.bas = new Panel(); this.bas.setBackground(Color.LIGHT_GRAY);
-this.add(this.bas,BorderLayout.SOUTH);
+		this.présentation = new TextField(message, 100);
+		this.présentation.setEditable(false);
+		this.haut.add(this.présentation);
 
-this.présentation = new TextField(message, 100); this.présentation.setEditable(false);
-this.haut.add(this.présentation);
+		this.billard = new Billard(billes);
+		this.add(this.billard);
 
-this.billard = new Billard(billes);
-this.add(this.billard);
+		this.lancerBilles = new Button("lancer les billes");
+		this.bas.add(this.lancerBilles);
+		this.arrêterBilles = new Button("arrêter les billes");
+		this.bas.add(this.arrêterBilles);
+	}
 
-this.lancerBilles = new Button("lancer les billes"); this.bas.add(this.lancerBilles);
-this.arrêterBilles = new Button("arrêter les billes"); this.bas.add(this.arrêterBilles);
+	public double largeurBillard() {
+		return this.billard.getWidth();
+	}
 
-}
+	public double hauteurBillard() {
+		return this.billard.getHeight();
+	}
 
-public double largeurBillard() 
-{
-return this.billard.getWidth();
-}
+	@Override
+	public void miseAJour() {
+		this.billard.repaint();
+	}
 
-public double hauteurBillard()
-{
-return this.billard.getHeight();
-}
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see exodecorateur.vues.VueBillard#montrer()
+	 */
+	@Override
+	public void montrer() {
+		this.setVisible(true);
+	}
 
-@Override
-public void miseAJour()
-{
-this.billard.repaint();
-}
+	@Override
+	public void ajouteObserverLancer(Animable animable) {
+		new EcouteurBouton(animable, lancerBilles, new ActionBoutonLance());
+	}
 
-/* (non-Javadoc)
- * @see exodecorateur.vues.VueBillard#montrer()
- */
-@Override
-public void montrer()
-{
-this.setVisible(true);
-}
-
-
+	@Override
+	public void ajouteObserverArreter(Animable animable) {
+		new EcouteurBouton(animable, arrêterBilles, new ActionBoutonArrete());
+	}
 
 }

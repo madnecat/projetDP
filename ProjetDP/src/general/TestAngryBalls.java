@@ -102,23 +102,23 @@ public class TestAngryBalls {
 		// ----------------------- mise en place des écouteurs de boutons qui
 		// permettent de contrôler (un peu...) l'application -----------------
 
-		EcouteurBoutonLancer écouteurBoutonLancer = new EcouteurBoutonLancer(
-				animationBilles);
-		EcouteurBoutonArrêter écouteurBoutonArrêter = new EcouteurBoutonArrêter(
-				animationBilles);
+//		EcouteurBoutonLancer écouteurBoutonLancer = new EcouteurBoutonLancer(
+//				animationBilles);
+//		EcouteurBoutonArrêter écouteurBoutonArrêter = new EcouteurBoutonArrêter(
+//				animationBilles);
 
 		// ------------------------- activation des écouteurs des boutons et ça
 		// tourne tout seul ------------------------------
 
-		cadre.lancerBilles.addActionListener(écouteurBoutonLancer); // maladroit
-																	// mais ne
-																	// changez
-																	// rien
-		cadre.arrêterBilles.addActionListener(écouteurBoutonArrêter); // maladroit
-																		// mais
-																		// ne
-																		// changez
-																		// rien
+//		cadre.lancerBilles.addActionListener(écouteurBoutonLancer); // maladroit
+//																	// mais ne
+//																	// changez
+//																	// rien
+//		cadre.arrêterBilles.addActionListener(écouteurBoutonArrêter); // maladroit
+//																		// mais
+//																		// ne
+//																		// changez
+//																		// rien
 
 	}
 

@@ -1,23 +1,30 @@
 package vues;
 
+import general.Animable;
+
+import java.util.Observer;
 
 /**
  * contrat respecté par toute vue capable de dessiner la liste des billes
  * 
- * Comme ça si vous n'aimez pas mes composants awt vous pouvez les changer sans changer le reste de l'appli
+ * Comme ça si vous n'aimez pas mes composants awt vous pouvez les changer sans
+ * changer le reste de l'appli
  * 
- *  ICI : IL N'Y A RIEN A CHANGER 
- *  
+ * ICI : IL N'Y A RIEN A CHANGER
+ * 
  * 
  * */
-public interface VueBillard
-{
+public interface VueBillard {
 
-public double largeurBillard();
+	public double largeurBillard();
 
-public double hauteurBillard();
+	public double hauteurBillard();
 
-public void miseAJour();
+	public void miseAJour();
 
-public void montrer();
+	public void montrer();
+	
+	public void ajouteObserverLancer(Animable animable);
+	
+	public void ajouteObserverArreter(Animable animable);
 }
