@@ -37,9 +37,9 @@ public class Billard extends Canvas {
 		Image mem = this.dbImage1;
 		this.dbImage1 = this.dbImage2;
 		this.dbImage2 = mem;
+		graphics.drawImage(dbImage2, 0, 0, this);
 		this.dbImage1 = createImage(this.getWidth(), this.getHeight());
 		this.paintComponent(dbImage1.getGraphics());
-		graphics.drawImage(dbImage2, 0, 0, this);
 	}
 	
 	public void paintComponent(Graphics graphics) {
