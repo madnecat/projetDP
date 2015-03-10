@@ -3,7 +3,6 @@ package vues;
 import general.Animable;
 
 import java.awt.*;
-import java.util.Observer;
 import java.util.Vector;
 
 import modele.Bille;

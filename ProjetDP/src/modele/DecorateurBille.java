@@ -12,7 +12,6 @@ public abstract class DecorateurBille extends Bille
 
 	public DecorateurBille(Bille billeDécoré)
 	{
-		//super(billeDécoré.getPosition(),billeDécoré.getRayon(),billeDécoré.getVitesse(),billeDécoré.getAccélération(),billeDécoré.getCouleur());
 		this.billeDécoré=billeDécoré;
 	}
 	

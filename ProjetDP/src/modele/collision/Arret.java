@@ -1,9 +1,5 @@
 package modele.collision;
 
-import java.awt.Color;
-import java.awt.Graphics;
-import java.util.Vector;
-
 import mesmaths.cinematique.Collisions;
 import mesmaths.geometrie.base.Vecteur;
 import modele.Bille;

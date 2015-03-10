@@ -2,8 +2,6 @@ package vues;
 
 import general.Animable;
 
-import java.util.Observer;
-
 /**
  * contrat respecté par toute vue capable de dessiner la liste des billes
  * 

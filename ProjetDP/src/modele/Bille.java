@@ -3,8 +3,6 @@ package modele;
 import java.awt.*;
 import java.util.Vector;
 
-import mesmaths.cinematique.Cinematique;
-import mesmaths.geometrie.base.Geop;
 import mesmaths.geometrie.base.Vecteur;
 
 

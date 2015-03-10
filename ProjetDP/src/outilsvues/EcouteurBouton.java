@@ -1,7 +1,5 @@
 package outilsvues;
 
-import general.Animable;
-
 import java.awt.Button;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
